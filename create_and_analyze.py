@@ -251,5 +251,15 @@ plt.tight_layout()
 plt.savefig("Pie_Penjualan_Diskon.png")
 plt.show()
 
-
+# Plot Persediaan Awal dan Persediaan Akhir
+plt.figure(figsize=(16, 6))
+plt.plot(df_persediaan["Tanggal"], df_persediaan["Persediaan Awal (Unit)"], label="Persediaan Awal (Unit)", color="blue")
+plt.plot(df_persediaan["Tanggal"], df_persediaan["Persediaan Akhir (Unit)"], label="Persediaan Akhir (Unit)", color="green")
+plt.title("Persediaan Awal dan Persediaan Akhir Tahun 2023")
+plt.xlabel("Tanggal")
+plt.ylabel("Jumlah (Unit)")
+plt.grid(True)
+plt.legend()
+plt.tight_layout()
+plt.show()
 
